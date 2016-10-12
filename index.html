@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width-device-width, initial-scale=1" />
+  <title>LOTTO App</title>
+    <script src="js/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="app/react.js"></script>
+    <script src="app/react-dom.js"></script>
+    <script src="app/browser.min.js"></script>
+    <script src="js/calc.js"></script>
+    <script src="js/chance.min.js"></script>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="css/stylesheet.css" />
+  </head>
+  <body>
+
+    <main class="app-container" id="app"></main>
+
+
+
+
+    <script type="text/babel">
+
+      var LottoApp = React.createClass({
+
+        getInitialState: function() {
+          return {lottoNum: ["$", "$", "$", "$", "$", "$"]}
+        },
+
+        genRandNum: function() {
+          this.setState({lottoNum: lottoSet()})
+        },
+
+        render: function() {
+          return(
+            <div className="cust-panel">
+              <div className="heading">LOTTO Number Generator</div>
+              <div className="number-container">
+                <div className="number-box">
+                  <div className="number-val">{this.state.lottoNum[0]}</div>
+                </div>
+                <div className="number-box">
+                  <div className="number-val">{this.state.lottoNum[1]}</div>
+                </div>
+                <div className="number-box">
+                  <div className="number-val">{this.state.lottoNum[2]}</div>
+                </div>
+                <div className="number-box">
+                  <div className="number-val">{this.state.lottoNum[3]}</div>
+                </div>
+                <div className="number-box">
+                  <div className="number-val">{this.state.lottoNum[4]}</div>
+                </div>
+                <div className="number-box">
+                  <div className="number-val">{this.state.lottoNum[5]}</div>
+                </div>
+              </div>
+              <div className="button-container">
+                <button onClick={this.genRandNum} type="button" className="btn btn-success">GENERATE</button>
+              </div>
+            </div>
+          );
+        }
+      });
+
+      ReactDOM.render(<LottoApp
+        num1 = {randNum()}
+        />,document.getElementById('app'));
+
+    </script>
+
+  </body>
+</html>

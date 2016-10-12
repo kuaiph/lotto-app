@@ -1,0 +1,68 @@
+@media only screen and (max-width : 670px) {
+
+  .cust-panel {
+    width: 100% !important;
+    height: 100vh !important;
+    //margin-top: 0vh !important;
+    //margin-bottom: 0vh !important;
+    @include zero-padding-margin;
+  }
+
+  .heading {
+    height: 15vh !important;
+    line-height: 15vh !important;
+  }
+
+  .number {
+    &-container {
+      height: 65vh !important;
+    }
+    &-val {
+      width: 1.7em !important;
+      max-height: 1.7em !important;
+      border-radius: 0.85em !important;
+      line-height: 1.7em !important;
+      font-size: 1.7em !important;
+    }
+  }
+
+  .button-container {
+    height: 20vh !important;
+    line-height: 20vh !important;
+  }
+
+}
+
+
+@media only screen and (max-width : 415px) {
+
+  .heading {
+    font-size: 4vh !important;
+    line-height: 10vh !important;
+    height: 10vh !important;
+  }
+
+  .number {
+    &-container {
+      height: 80vh !important;
+      padding-left: 5vw !important;
+      padding-right: 5vw !important;
+    }
+  }
+
+}
+
+
+@media only screen and (max-width : 350px) {
+
+  .number {
+    &-val {
+      width: 1.6em !important;
+      max-height: 1.6em !important;
+      border-radius: 0.8em !important;
+      line-height: 1.6em !important;
+      font-size: 1.6em !important;
+    }
+  }
+
+}

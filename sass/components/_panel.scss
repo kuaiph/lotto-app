@@ -1,0 +1,10 @@
+.cust-panel {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  height: 40vh;
+  margin-top: 30vh;
+  margin-bottom: 30vh;
+  background-color: #F5F5DC;
+  @include standard-box-border;
+}
